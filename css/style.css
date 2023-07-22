@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+:root {
+    --vermelho: #ff0000;
+    --degrade-fundo: linear-gradient(to bottom, #e0573e,  #eb9962);
+    --cinza: #746e6e;
+    --cinza-escuro: #1d1c1c;
+    --cor-borda-pesquisa: #333;
+    --cor-fonte: #353b41;
+    --cor-desfoque: #888;
+    --cor-borda-botao: #000;
+    --branco: #fff;
+    --cor-botao: #444;
+}
+
+.container {
+    text-align: center;
+    background: var(--degrade-fundo) no-repeat;
+    min-height: 100vh;
+}
+
+.container__pokedex {
+    display:inline-block;
+    margin-top: 2%;
+    padding: 15px;
+    position: relative;
+}
+
+.pokedex__img {
+    width: 100%;
+    max-width: 425px;
+}
+
+.pokedex__pokemon {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 18%;
+}
+
+.pokemon__dados {
+    position: absolute;
+    font-weight: 600;
+    color: var(--cinza);
+    top: 54.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemon__nome {
+    color: var(--cinza-escuro);
+    text-transform: capitalize;
+}
+
+.pokemon__formulario {
+    position: absolute;
+    width: 65%;
+    top: 63%;
+    left: 13.5%;
+}
+
+.formulario__pesquisa {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid var(--cor-borda-pesquisa);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--cor-fonte);
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 var(--cor-desfoque), -5px 7px 0 var(--cor-borda-pesquisa);
+}
+
+.pokedex__botao {
+    position: absolute;
+    bottom: 10%;
+    left:  13%;
+    width: 65%;
+    transform: translate(-57% 0);
+    display: flex;
+    gap: 20px;
+}
+
+.botao {
+  width: 50%; 
+  padding: 4%;
+  border: 2px solid var(--cor-borda-botao);
+  border-radius: 8px;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: var(--branco);
+  background-color: var(--cor-botao);
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 var(--cor-borda-botao);
+}
+
+.botao:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
